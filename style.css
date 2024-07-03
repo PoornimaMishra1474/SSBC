@@ -280,7 +280,7 @@ h1 {
 }
 
 #WhyChooseUs{
-    background-image: url("/HTML/ssbc/WhyChooseUs.jpg");
+    background-image: url("WhyChooseUs.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 100px;
