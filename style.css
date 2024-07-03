@@ -225,11 +225,13 @@ h1 {
     font-family: 'Lato', sans-serif;
     border-radius: 20px;
     color: white;
+    font-size: 1.5rem;
 }
 
 @media (max-width:600px){
     .list{
         margin-left: 0%;
+        width: 80vw;
     }
 }
 
@@ -243,7 +245,15 @@ h1 {
     height: 40px;
     font-size: larger;
 }
-
+@media (max-width:1000px) {
+    .list:hover {
+        background-color: white;
+        color: darkblue;
+        border-radius: 20px;
+        height: 40px;
+        font-size:1.5rem;
+    }
+}
 #expertise h1{
     background-color:lightblue;
     padding: 1%;
