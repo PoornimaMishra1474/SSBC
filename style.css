@@ -1,0 +1,441 @@
+body {
+    margin: 0;
+    font-size: 1.3rem;
+    background-color: white;
+    width: 100vw;
+}
+
+header{
+    width: 100vw;
+}
+@media (max-width:905px){
+    body{
+        font-size: 1rem;
+    }
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: #4b8696;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: fit-content;
+
+}
+
+#menubar {
+    margin-top: 3.5rem;
+    position: absolute;
+    margin-right: 10rem;
+}
+.dropdown{
+    width: 100vw;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    margin-top: 5rem;
+}
+
+.dropdown button{
+    background-color: hsl(205, 36%, 24%);
+    color: white;
+    padding :1rem 1.5rem;
+    margin: 2.5rem 2.5rem;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    width: 30vw;
+}
+
+.menulist :hover{
+    background-color:hsl(205, 25%, 46%);
+}
+
+.dropdown .menulist{
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px hsla(0,0%,0%,0.8);
+}
+.dropdown:hover .menulist{
+    display: block;
+}
+
+.menubar:checked ~ .menulist{
+    display: inline;
+}
+
+#navbar ul {
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: auto;
+    padding: 0%;
+}
+
+#navbar ul li {
+    margin: 1rem;
+    padding: 1rem;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Lato', sans-serif;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#navbar ul li :hover {
+    text-decoration: underline;
+    background-color: black;
+    padding: 1rem;
+    margin: 0.5rem;
+    color: white;
+    border-radius: 1rem;
+}
+
+@media (max-width:500px){
+    .item{
+        padding: 0.5rem;
+        margin: 0.5rem;
+        flex-wrap: wrap;
+    }
+}
+
+.logo {
+    margin-top: 1.5rem;
+    margin-left: 0.4rem;
+    padding: 1em;
+}
+
+.logo img{
+    width: 6rem;
+    height: 6rem;
+    margin-top: -23px;
+    margin-left: -3px;
+    opacity: 1;
+}
+
+.logotxt{
+    margin-top: 55px;
+    text-decoration:dashed;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    text-wrap:balance;
+    text-decoration: underline;
+    padding: 50px;
+}
+
+@media (max-width:600px){
+    h1{
+        font-size: 2rem;
+    }
+}
+#Home {
+    background-image: url("home.jpg");
+    height:25em;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 100vw;
+}
+
+#AboutUs {
+    text-align: center;
+    display: flex;
+}
+
+
+.Element1AboutUs{
+    width: 40%;
+}
+.Element2AboutUs{
+    width: 60%;
+}
+
+@media (max-width:600px){
+    .Element1AboutUs{
+        width: 1000%;
+    }
+    .Element2AboutUs{
+        width: 100%;
+    }
+    .Element2AboutUs p {
+        padding: 0.3rem;
+    }
+    #AboutUs {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
+.Element2AboutUs p {
+    text-align: justify;
+    padding: 1rem;
+}
+
+.Element2AboutUs{
+    padding-right: 1rem;
+}
+
+.Element2AboutUs h3{
+    text-align: left;
+    padding: 15px;
+}
+
+#WhatWeOffer{
+    background-image: url("city.jpg"); 
+    background-size: cover; 
+}
+
+.content{
+    padding-left: 50px;
+}
+
+#WhatWeOffer ul{
+    display: flex;
+    flex-direction:column;
+    margin-left: auto;
+}
+
+.list{
+    margin: 14px;
+    padding: 14px;
+    margin-left: 100px;
+    width:fit-content;
+    list-style: none;
+    background-color:rgb(35, 71, 144);
+    font-family: 'Lato', sans-serif;
+    border-radius: 20px;
+    color: white;
+}
+
+@media (max-width:600px){
+    .list{
+        margin-left: 0%;
+    }
+}
+
+.list:hover {
+    background-color: white;
+    color: darkblue;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 30px;
+    margin-left: 100px;
+    height: 40px;
+    font-size: larger;
+}
+
+#expertise h1{
+    background-color:lightblue;
+    padding: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    border-radius: 10px;
+    animation-name: ani2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: alternate;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-direction:normal;
+}
+
+@keyframes ani2 {
+    from {
+        padding-left: 0px;
+        padding-right: 0%;
+    }
+
+    to {
+        padding-left: 4vw;
+        padding-right: 4vw;
+        border-radius: 20px;
+    }
+}
+
+#expertise p{
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: justify;
+}
+
+#WhyChooseUs{
+    background-image: url("/HTML/ssbc/WhyChooseUs.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px;
+}
+
+#WhyChooseUs h1{
+    margin: 0px;
+    padding: 0px;
+}
+
+#Products {
+    padding: 0px;
+    text-align: center;
+    background-color: lightblue;
+}
+
+.box {
+    display: flex;
+    /* flex-wrap: wrap; */
+    width: 100vw;
+    grid-gap: 0.3rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width:1122px){
+    .box{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.boxx {
+    width: 100vw;
+    border: 8px solid grey;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+}
+
+.boxx h1 {
+    /* text-decoration: none; */
+    text-decoration: underline;
+    color: white;
+}
+
+/* .boxx img {
+    height: 200px;
+    width: 200px;
+} */
+.boxx img {
+    height: 12em;
+    width: 12em;
+}
+
+.boxx:hover{
+    /* background-color: rgb(3, 3, 61); */
+    color: white;
+    opacity: 0.8;
+    box-shadow: 35px 35px 35px black;
+    text-decoration: underline;
+}
+
+#AreasWeCover {
+    margin: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+#JoinUsOnOurJourney{
+    margin: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+#ContactUs {
+    margin: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    height:400px;
+    /* color: white; */
+    text-align:left;
+    background-image: url("https://imgs.search.brave.com/0KKl5uqnI7cQFqx8LnPZDSRRyCCoiBH2pKguVQeC678/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9jbG9zZS11cC12/b2lwLXRlbGVwaG9u/ZS1sYW5kbGluZS1v/ZmZpY2VfNDI3MDgt/NjI1LmpwZz9zaXpl/PTYyNiZleHQ9anBn");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+button {
+    font-size: 1.5rem;
+    border-radius: 30%;
+    padding:0.5rem 1.5rem;
+    /* position: sticky; */
+}
+
+button a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: black;
+    color: aliceblue;
+}
+
+#CopyRight {
+    text-align: center;
+    animation: ani1 3s ease-in infinite;    
+}
+
+@keyframes ani1 {
+    from {
+        /* margin-right: 100px; */
+        color: white;
+    }
+
+    to {
+        /* margin-left: 500px; */
+        color: black;
+    }
+}
+
+@media(max-width:1000px) {
+    /* #navbar ul{
+        display:flex;
+    }
+    .dropdown{
+        display: none;
+    } */
+
+    #navbar ul{
+        display:none;
+    }
+    .dropdown{
+        text-align: right;
+        color: white ;
+        width: 100vw;
+    }
+
+}
+@media(min-width:1000px) {
+    
+    /* #navbar ul{
+        display:none;
+    }
+    .dropdown{
+        text-align: right;
+        color: white ;
+        width: 100vw;
+    } */
+    
+    #navbar ul{
+        display:flex;
+    }
+    .dropdown{
+        display: none;
+    }
+
+}

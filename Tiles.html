@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiles</title>
+    <style>
+        body {
+            margin: 0;
+            font-size: 1.5rem;
+            background-color: whitesmoke;
+            width: 100vw;
+            }
+        #navbar {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            background-color: #4b8696;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            height: fit-content;
+        }
+        .logo {
+            margin-top: 1.5rem;
+            margin-left: 0.4rem;
+            padding: 1em;
+        }
+        
+        .logo img{
+            width: 6rem;
+            height: 6rem;
+            margin-top: -23px;
+            margin-left: -3px;
+            opacity: 1;
+        }
+        
+        .logotxt{
+            margin-top: 55px;
+            text-decoration:dashed;
+            color: white;
+        }
+            
+        #product{
+                display: flex;
+                flex-direction: column;
+            }
+        
+            .productlist{
+                list-style:none;
+                padding: 2em;
+                height: fit-content;
+                margin: 2em;   
+                background-color: #4b8696;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                border-radius: 3em;
+            }
+            @media (max-width:500px) {
+                .productlist{
+                padding: 1em;
+                margin: 1em;
+                border-radius: 1em;
+                }
+                h1{
+                    font-size: 0.8rem;
+                }
+                h3{
+                    font-size: 0.8rem;
+                }
+            }
+        
+            @media (max-width:1000px) {
+                .productlist{
+                    flex-direction: column;
+                }        
+            }
+        
+            .productImage img{
+                width: 20em;
+                height: 20em;
+            }
+            @media (max-width:600px) {
+                .productImage img{
+                width: 10em;
+                height: 10em;
+            }
+            .text{
+                font-size: 0.8rem;
+            }
+            }
+        
+            .productlist img{
+                width:30vw;
+            }
+        
+            @media (max-width:1000px) {
+                .productlist img{
+                width:50vw;
+            }
+            }
+        
+            @media (max-width:640px) {
+                .productlist img{
+                width:60vw;
+            }
+            }
+        
+            .text{
+                width:70vw;
+                align-self: center;
+                text-align: right;
+                padding-right: 6rem;
+            }
+            @media (max-width:1250px){
+                .text{
+                    padding-right:2rem;
+                }        
+            }
+        
+            </style>
+</head>
+<body>
+    <div id="navbar">
+            <div class="logo">
+                <img src="logo.jpg" alt="The INITIATIVE">
+            </div>
+            <div class="logotxt">Building the Future, One Brick at a Time</div>
+    </div>
+    <div id="product">
+        <ul>
+            <li class="productlist">
+                <a href=""><div class="productImage"><img src="" alt=""></div></a>
+                <div class="text"><h1>Update Pending</h1>
+                    <!-- <h3>Specification/Additional Details</h3> -->
+                </div>
+            </li>
+           
+        </ul>
+    </div>
+
+</body>
+</html>

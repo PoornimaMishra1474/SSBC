@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>styling with css</title>
+    <style>
+        /* selectors */
+        /* universal selector  */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #e6cbf8;
+            opacity: 1.0;
+        }
+
+        /* value from 0.0 - 1.0. The lower value, the more transparent */
+        /* background-image: url("img_tree.png");
+                background-repeat: no-repeat;
+                background-position: right top;
+                background-attachment: fixed; the image stops scrooling
+                } */
+        /* element selector  */
+        :root {
+            --box--color: aquamarine;
+            /* global variable */
+        }
+
+        p {
+            --box-color: black;
+            /* local variable */
+            /* creating a css variable  */
+            border: var(--box-color);
+            border-color: var(--box-color);
+            /* using a variable */
+            font-size: 20px;
+            color: rgb(43, 9, 209);
+            background-color: yellowgreen;
+            text-align: center;
+            border: 10px;
+            border-width: 5px;
+            border-radius: 25px;
+            border-style: double;
+            /* border:2px solid Tomato; */
+            margin: 30px;
+            box-sizing: border-box;
+        }
+
+        /* class selector */
+        .para2 {
+            color: purple;
+            display: none;
+        }
+
+        @media (max-width:500px) {
+            .para2 {
+                display: block;
+            }
+        }
+
+        /* for device relative website view */
+        @media (min-width:500px) {
+            #para1 {
+                display: block;
+            }
+        }
+
+        /* id selector */
+        /* An id name cannot start with a number! */
+        #para1 {
+            color: rgb(49, 21, 208);
+            display: none;
+        }
+
+        /* grouping selector */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-style: italic;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            color: black;
+        }
+
+
+        /* more on selectors
+        if p is inside li and li is inside div:
+                div li p {}
+        if p is right inside div
+                div > p {}
+        if p is right sfter div
+                div + p {}
+        to target a perticular attribute
+                input[targer="_blank"]{
+                    "here target is the attribute of 'a'."
+                }*/
+
+
+        .container {
+            /* initialising container class as flex  */
+            display: flex;
+            /* flex properties for flex container */
+            flex-direction: column;
+            flex-direction: column-reverse;
+            flex-direction: row-reverse;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* shorthand */
+            /* flex-flow: row-reverse wrap; */
+
+            /* justify : gives sapces between the  flex boxes*/
+            justify-content: center;
+            /* every thing at center */
+            justify-content: space-between;
+            /* space betweent 2 boxes is equal & no space at the end  */
+            justify-content: space-evenly;
+            /* equal spaces between the boxes including starting and end  */
+            justify-content: space-around;
+            /* space around a box or flex item */
+
+            /* aline items */
+            align-items: center;
+            /* center : gives vertically centered items 
+            flex-end : at the vertical end 
+            (deault)->flex-start*/
+        }
+
+        /* flex properties for flex container */
+        #i-1 {
+            order: 5;
+            flex-grow: 5;
+            flex-shrink: 1;
+        }
+
+        #i-1 {
+            order: 1;
+            /* smaler the order earlier will be the element  */
+            flex-grow: 10;
+            /* more the number  more will it grow also negative numbers are invalid */
+            flex-shrink: 10;
+            /* works same as flex-grow but to shrink the content also negative numbers are allowed  */
+        }
+
+        #i-1 {
+            flex-basis: 200px;
+            /* it controlls width when flex-direction is row and height when it is coloumn */
+            /* flex shorthand */
+            flex: 2 2 300px;
+            /* this is for grow shirnk and basis */
+            align-self: center;
+            /* aligns the item */
+        }
+
+        /* this willapply css for third child  */
+        li:nth-child(3) {
+            background-color: cyan;
+            display: block;
+            width: 184px;
+            margin: auto;
+        }
+
+        /* this willapply css for every second child  */
+        li:nth-child(2n+0) {
+            background-color: red;
+            display: block;
+            display: block;
+            width: 184px;
+            margin: auto;
+        }
+
+        .new {
+            background-color: greenyellow;
+        }
+
+        .box {
+            background-color: green;
+            width: 250px;
+            height: 250px;
+            position: relative;
+            animation-name: ani2;
+            /* we can give any name to our animation */
+            animation-duration: 8s;
+            /* total time of animation */
+            animation-iteration-count: 1;
+            /* number of times an animation is to made */
+            animation-fill-mode: alternate;
+            /* describes the progress of animation  */
+            animation-timing-function: ease-in-out;
+            /* slow fast slow  */
+            animation-delay: 3s;
+            /* animation starts after 3s of entering the website */
+            animation-direction: reverse;
+            /* progress in reverse direction */
+            /* these properties can be used using a shorthand */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation: ani2 5s ease-in 1s 12 backwards; */
+        }
+
+        @keyframes ani1 {
+            0% {
+                top: 0px;
+                left: 0px;
+            }
+
+            25% {
+                top: 250px;
+                left: 0px;
+            }
+
+            75% {
+                top: 250px;
+                left: 250px;
+            }
+
+            100% {
+                top: 0px;
+                left: 250px;
+            }
+        }
+        @keyframes ani2 {
+            from {
+                width: 200px;
+            }
+
+            to {
+                width: 1200px;
+            }
+        }
+
+        .boxx {
+            display: flex;
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            justify-content: center;
+            align-items: center;
+
+            /* transition-property: background-color;
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 2s; */
+
+            /* shorthand */
+            /* transition: background-color 1s ease-in-out 2s; */
+
+            /* for multiple transition elements */
+            transition: all 1s ease-in-out .3s;
+        }
+
+        .boxx:hover{
+            background-color: green ;
+            height: 400px;
+            width: 400px;
+            border-radius: 100px;
+            font-size: 45px;
+        }
+        .neeww{
+            height: 80vh;
+            background-color: burlywood;
+            display: flex;
+            justify-content: center;       
+            align-items: center;
+        }
+        .booxx{
+            display: flex;
+            justify-content: center;       
+            align-items: center;
+            background-color: palevioletred;
+            border: 2px solid black;
+            border-radius: 8px;
+            height: 400px;
+            width: 400px;
+            transition: all 1s ;
+        }
+        .booxx:hover{
+            transform: rotate(360deg);
+            /* transform: skew(40deg); */
+            /* transform: scale(2); */
+            /* shift in x ot y direction */
+                /* transform: translateX(123px); */
+                /* transform: translateY(123px); */
+                /* transform: translate(123px, 123px); */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>styling with css</h1>
+    <h4>this is first paragraph</h4>
+    <p id="para1" class="redbg">
+        <br>this is first line of the first paragraph
+        <br>lets write the second line
+        <br>what about the third
+        <br>you did a great job
+    </p>
+
+
+    <h4>this is second paragraph</h4>
+    <p id="secondPara" class="para2">
+        <br>this is first line of the second paragraph
+        <br>lets write the second line
+        <br>what about the third
+        <br>this looks same as before
+    </p>
+
+
+    <h4>this is third paragraph</h4>
+    <p id="thirdPara" class="para3">
+        <br>this is first line of the third paragraph
+        <br>lets write the second line
+        <br>what about the third
+        <br>lets make it different
+    </p>
+    <p> <strong>float</strong> is used so that the text boxes can be made to float <br>
+        <!-- float:left;  -->
+        <strong>clear</strong> is used so that no text box overlap each other
+    </p>
+    <!-- clear:left; -->
+    <h3>flex box</h3>
+    <div class="container">
+        <p id="i-1">this</p>
+        <p id="i-2">is </p>
+        <p id="i-3">a</p>
+        <p>new</p>
+        <p>class</p>
+        <p>container</p>
+        <p>for</p>
+        <p>explaning</p>
+        <p>flex</p>
+        <p>property</p>
+    </div>
+    <div>
+        <li>this is 1 elenemt</li>
+        <li>this is 2 elenemt</li>
+        <li>this is 3 elenemt</li>
+        <li>this is 4 elenemt</li>
+        <li>this is 5 elenemt</li>
+        <li>this is 6 elenemt</li>
+        <li>this is 7 elenemt</li>
+        <li>this is 8 elenemt</li>
+        <li>this is 9 elenemt</li>
+        <li>this is 10 elenemt</li>
+    </div>
+    <div class="new">
+        <div class="box">
+            this is a new box for animation and keyframes
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <div class="neww">
+        <div class="boxx">
+            this is a new box for transition
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <div class="neeww">
+        <div class="booxx">
+            this is a new box for transformation
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- 
+fonts
+borders
+backgrounds
+padding 
+margin
+links 
+buttons
+z index 
+ -->
+
+
+
+<!-- colors
+rgb values : rgb(red, green, blue) ranges for 0 to 255
+
+rgba values : rgba(red, green, blue, alpha)
+The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all) 
+
+hexadecimal : #RRGGBB, where the RR (red), GG (green) and BB (blue)
+
+HSL
+HSL stands for hue, saturation, and lightness.
+
+Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+Saturation is a percentage value, 0% means a shade of gray, and 100% is the full color.
+Lightness is also a percentage, 0% is black, 50% is neither light or dark, 100% is white
+Experiment by mixing the HSL values below-->
+
+
+<!-- Types of positions 
+static(default)
+
+relative:related to its actual position;leaves gap at normal position
+absolute:related to its absolute(first parent) position
+fixed:position is fixed even when we scrol 
+sticky:sticks to the default value when scroled-->
+
+<!-- media queries : for responsive design-->
+
+<!-- display
+inline 
+block
+inline block  
+flex-->
